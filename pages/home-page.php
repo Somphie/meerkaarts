@@ -14,7 +14,7 @@
      <li><a href="over-ons.php">over ons</a></li>
     </ul>
     <div class="boomboom">
-        <img src="minesweeper.jpg" alt="minesweeper">
+        <img src="images/minesweeper.jpg" alt="minesweeper">
     </div>
 </body>
 </html>

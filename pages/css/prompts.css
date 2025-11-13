@@ -1,0 +1,62 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(218, 217, 217);
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  background-color: rgb(218, 217, 217);
+  height: 90px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 48px;
+}
+
+.navbar li {
+  display: flex;
+  align-items: stretch;
+}
+
+.navbar li a {
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 24px;
+  padding: 0 38px;
+}
+
+.navbar li a.selected {
+  background-color: #1e7cff;
+  color: white;
+}
+
+.page-title {
+    display: flex;
+    justify-content: center;
+    background-color: #1655ac;
+    color: white;
+}
+
+.prompt-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.prompt-header{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}

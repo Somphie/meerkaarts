@@ -8,15 +8,7 @@
 </head>
 <body>
 
-  <nav class="navbar">
-  <ul>
-    <li><a href="#">over ons</a></li>
-    <li><a href="#">gamemodes</a></li>
-    <li><a href="#">home</a></li>
-    <li><a href="#" class="selected">prompts inzenden</a></li>
-    <li><a href="#">samballen</a></li>
-  </ul>
-</nav>
+<?php include("../presets/nav.php"); ?>
 
   <main class="content">
     <h1 class="page-title">Prompts inzenden</h1>

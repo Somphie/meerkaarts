@@ -1,38 +1,24 @@
 body {
   margin: 0;
-   background-image: url(images/shit.png);
-   background-size: cover;
+  height: 100vh;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #a49d9d;
+main {
+  background-image: url(../images/wave.png);
+  background-size: cover;
+  width: auto;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-ul li {
-  float: left;
-}
-
-ul li a {
-  display: block;
-  color: rgb(15, 14, 14);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-ul li a:hover {
-  background-color: #000dff;
-  color: white;
-}
-.boomboom {
+.Img {
   width: 100%;
   display: flex;
   justify-content: end;
 }
-.boomboom img {
+
+.Img img {
   width: 10%;
 }

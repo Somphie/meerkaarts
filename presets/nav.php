@@ -9,16 +9,13 @@
 
     <nav>
         <ul>
-            <li><a id="word" href="">Over ons</a></li>
-            <li><a id="word" href="">Gamemodes</a></li>
-            <li><a id="word" href="">Home</a></li>
-            <li><a id="word" href="">Prompts inzenden</a></li>
-            <li><a id="word" href="">de samballen</a></li>
+            <li><a id="word" href="./over-ons.php">Over ons</a></li>
+            <li><a id="word" href="./gamepage.php">Gamemodes</a></li>
+            <li><a id="word" href="./home-page.php">Home</a></li>
+            <li><a id="word" href="./prompts.php">Prompts inzenden</a></li>
+            <li><a id="word" href="./sambalindex.php">de samballen</a></li>
         </ul>
     </nav>
-
-    <div class="list">
-    </div>
     <style>
         nav {
             display: flex;

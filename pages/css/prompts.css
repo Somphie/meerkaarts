@@ -4,41 +4,7 @@ html, body {
   background-color: rgb(218, 217, 217);
 }
 
-.navbar {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  background-color: rgb(218, 217, 217);
-  height: 90px;
-}
 
-.navbar ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 48px;
-}
-
-.navbar li {
-  display: flex;
-  align-items: stretch;
-}
-
-.navbar li a {
-  display: flex;
-  align-items: center;
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  font-weight: bolder;
-  font-size: 24px;
-  padding: 0 38px;
-}
-
-.navbar li a.selected {
-  background-color: #1e7cff;
-  color: white;
-}
 
 .page-title {
     display: flex;

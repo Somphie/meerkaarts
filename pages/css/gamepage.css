@@ -18,12 +18,13 @@ body {
 .grootediv {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 90%;
   height: 100vh;
   align-items: center;
 }
 
-
+ 
+/*
 .naam {
   display: flex;
   justify-content: center;
@@ -31,12 +32,25 @@ body {
   width: 70%;
   height: 10vh;
 } 
+*/
+
 
 .blauw {
     background-color: blue;
-    opacity:60% ;
+   opacity: 60%;
     height: 100vh;
-    width: 70%;
+    width: 80%;
     display: flex;
     justify-content: center;
+<<<<<<< HEAD
+=======
+    color: white;
+    flex-direction: column;
+}
+
+.speelvlak {
+  background-color:darkgray;
+  width:80% ;
+  height: 50%;
+>>>>>>> cb15f421dea14d73950d854237b27417eecb75e4
 }

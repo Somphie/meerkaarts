@@ -42,15 +42,4 @@ body {
     width: 80%;
     display: flex;
     justify-content: center;
-<<<<<<< HEAD
-=======
-    color: white;
-    flex-direction: column;
-}
-
-.speelvlak {
-  background-color:darkgray;
-  width:80% ;
-  height: 50%;
->>>>>>> cb15f421dea14d73950d854237b27417eecb75e4
 }

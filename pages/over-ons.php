@@ -10,19 +10,21 @@
 
 <body>
     <?php include("../presets/nav.php"); ?>
-    <h1>Over ons</h1>
+
+<div class="container">
     <h1>We hebben dit project gemaakt  omdat meneer Kraats weggaat</h1>
-    <br>
-   <h2> wie hebben dit gemaakt?</h2> : 
-    <div class="kraats">
-        <p>Sophie</p> 
-        <p>Sam</p> 
-        <p>Bram</p> 
-        <p>Brett</p> 
-        <p>Morten</p> 
-        <p>Fedde</p> 
-        <p>Inge</p> 
-        <p>Merel</p> 
+
+    <img src="images/sophiecomputer.png" alt="sophie" width="50%px">
+    <img src="images/bramcomputer.png" alt="bram" width="50%px">
+    <img src="images/samcomputer.png" alt="sam" width="50%px">
+    <img src="images/mikecomputer.png" alt="mike" width="50%px">
+    <img src="images/feddecomputer.png" alt="fedde" width="50%px">
+    <img src="images/ingecomputer.png" alt="inge" width="50%px">
+    <img src="images/merelcomputer.png" alt="merel" width="50%px">
+    <img src="images/brettcomputer.png" alt="brett" width="50%px">
+    <img src="images/mortencomputer.png" alt="morten" width="50%px">
+    <img src="images/asociate.png" alt="acosiate" width="50%px">
+
 </div>
 </body>
 

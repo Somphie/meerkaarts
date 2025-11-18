@@ -1,14 +1,12 @@
 body {
+  background-image: url("../images/hout.jpg");
+  background-repeat: repeat;   /* herhaal de afbeelding */
+  background-position: center; /* centreren */
+  width: 100%;
+  height: 100vh;
   margin: 0;
-  padding: 0;
 }
 
-h1, p {
-  margin: 10px;
-}
-
-.kraats{
-  display: flex;
-  
-    background-color: white;
+.container {
+  text-align: center;
 }

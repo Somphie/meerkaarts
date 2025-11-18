@@ -2,7 +2,7 @@ main {
      background-image: url(../images/windows95.png);
   background-size: cover;
   width: auto;
-  height: 100%;
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,6 +14,23 @@ body {
   margin: 0;
   height: 100vh;
 }
+
+.grootediv {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100vh;
+  align-items: center;
+}
+
+
+.naam {
+  display: flex;
+  justify-content: center;
+  background-color: blue;
+  width: 70%;
+  height: 10vh;
+} 
 
 .blauw {
     background-color: blue;

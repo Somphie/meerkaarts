@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include 'presets/nav.php';?>
+    <?php include '../presets/nav.php';?>
 </body>
 </html>

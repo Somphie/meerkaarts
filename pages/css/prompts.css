@@ -1,0 +1,28 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(218, 217, 217);
+}
+
+
+
+.page-title {
+    display: flex;
+    justify-content: center;
+    background-color: #1655ac;
+    color: white;
+}
+
+.prompt-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.prompt-header{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}

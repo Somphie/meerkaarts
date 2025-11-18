@@ -7,12 +7,15 @@
     <title>meerkaarts.io</title>
 </head>
 <body>
-     <ul> 
-     <li><a href="home-page.php">Home</a></li>
-     <li><a href="gamepage.php">Gamemodes</a></li>
-     <li><a href="samballen.php">Samballen</a></li>
-     <li><a href="over-ons.php">over ons</a></li>
-    </ul>
+     <nav>
+        <ul>
+            <li><a href="over-ons.php">Over ons</a></li>
+            <li><a href="gamepage.php">Gamemodes</a></li>
+            <li><a href="home-page.php">Home</a></li>
+            <li><a href="">Prompts inzenden</a></li>
+            <li><a href="">de samballen</a></li>
+        </ul>
+</nav>
     <div class="boomboom">
         <img src="minesweeper.jpg" alt="minesweeper">
     </div>

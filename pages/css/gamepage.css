@@ -1,12 +1,12 @@
 main {
-     background-image: url(../images/windows95.png);
-  background-size: cover;
-  width: auto;
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-      display: flex;
+    background-image: url(../images/windows95.png);
+    background-size: cover;
+    width: auto;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
     justify-content: center;
 }
 
@@ -39,5 +39,4 @@ body {
     width: 70%;
     display: flex;
     justify-content: center;
-    color: white;
 }

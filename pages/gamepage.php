@@ -12,13 +12,12 @@
     <?php include("../presets/nav.php"); ?>
     <main>
         <div class="grootediv">
-        <div class="blauw">
-            <h1>De GAme</h1>
+            <div class="blauw">
+                <h1>De GAme</h1>
 
-            <div class="speelvlak"></div>
+                <div class="speelvlak"></div>
+            </div>
         </div>
-
-</div>
     </main>
 </body>
 

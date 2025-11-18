@@ -10,6 +10,7 @@
 
 <body>
     <?php include("../presets/nav.php"); ?>
+    
     <main>
         <div class="Img">
             <img src="images/minesweeper.jpg" alt="minesweeper">

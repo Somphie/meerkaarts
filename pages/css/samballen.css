@@ -1,0 +1,46 @@
+body {
+    cursor: url("../images/kraatscursor.jpg"), not-allowed;
+    background-image: url("../images/samballenbackground.jpg");
+    background-repeat: no-repeat;
+    background-color: lawngreen ;
+}
+
+.container {
+    text-align: center;
+    top: -20%;
+    color: white;
+}
+.video-wrapper {
+   white-space: nowrap;    
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.spotify-embed {
+   width: 50%;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    top: -20%;
+    color: white;
+    gap: 5%;
+}
+
+.img1 {
+    left: 50%;
+}
+
+.samballenpfp {
+    animation-name: spin;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 2s; /* duur van één rotatie */
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}

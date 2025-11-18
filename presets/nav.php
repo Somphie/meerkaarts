@@ -10,7 +10,7 @@
     <nav>
         <ul>
             <li><a class="word" href="./over-ons.php">Over ons</a></li>
-            <li><a class="word" href="./gamepage.php">Gamemodes</a></li>
+            <li><a class="word" href="./gamemodes.php">Gamemodes</a></li>
             <li><a class="word" href="./home-page.php">Home</a></li>
             <li><a class="word" href="./prompts.php">Prompts inzenden</a></li>
             <li><a class="word" href="./sambalindex.php">de samballen</a></li>

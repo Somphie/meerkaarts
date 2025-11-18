@@ -7,5 +7,7 @@
 </head>
 <body>
     <?php include '../presets/nav.php';?>
+
+    <h1>Samballen page lock in</h1>
 </body>
 </html>

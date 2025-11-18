@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+main {
+  background-image: url(../images/wave.png);
+  background-size: cover;
+  width: auto;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Img {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.Img img {
+  width: 10%;
+}

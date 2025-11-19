@@ -10,10 +10,15 @@
 
 <body>
     <?php include("../presets/nav.php"); ?>
-    
-    <main>
-        <div class="Img">
-            <img src="images/minesweeper.jpg" alt="minesweeper">
+
+     <main>
+        <div class="grootediv">
+        <div class="blauw">
+            <h1>meerkaarts.io</h1>
+            <div class="boom">
+                <img src="images/minesweeper.jpg" alt="minesweeper"></div>
+        </div>
+        
         </div>
     </main>
 </body>

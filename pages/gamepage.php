@@ -16,7 +16,9 @@
             <div class="blauw">
                 <h1>De GAme</h1>
 
-                <div class="speelvlak"></div>
+                <div class="speelvlak">
+                    <div class="spelletje"></div>
+                </div>
             </div>
         </div>
     </main>

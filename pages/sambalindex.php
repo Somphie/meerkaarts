@@ -89,7 +89,17 @@
 </div>
 
 <br>
+<div class="overons">
+        <h1>Wij zijn de samballen en jij bent een augurk!!!
+        🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒🥒</h1>
+        <h3>WIJ ZIJN</h3>
+        <h3>.DE SAMBAL PRINSES</h3>
+        <h3>.DE SOFTWARE</h3>
+        <h3>.JOS PIETER BrAM</h3>
 
+        <h2>s'werelds Beste, slechtste en ENIGSTE grind augurkpunk Band!!!!!!!!!!🍻🍺🎰🎰🤹‍♂️🥇🔥🔥🔥🔥🔥</h2>
+    </div>
+    <br>
 <div class="container2">
     <div class="img1">
     <a href="https://bram35.github.io/">
@@ -97,7 +107,7 @@
     </a>
     </div>
 
-
+    
     <iframe class="spotify-embed" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/0j0ihhyUJ8UY01QZ5hFzDQ?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
     <div class="img2">
@@ -105,6 +115,14 @@
             <img src="images/SamballenMerchBack.png" alt="merch" width="300px">
         </a>
     </div>
+
+</div>
+
+<div class="liveshows">
+
+        <h1>Live Shows</h1>
+        <br>
+            <h2>school studio 19-11-2025</h2>
 
 </div>
 

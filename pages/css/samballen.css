@@ -36,11 +36,30 @@ body {
     animation-name: spin;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    animation-duration: 2s; /* duur van één rotatie */
+    animation-duration: 2s;
 }
 
 @keyframes spin {
     100% {
         transform: rotate(360deg);
     }
+}
+
+.liveshows {
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.overons {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-image: url("../images/ogfotoahh.png");
+     background-position: center 20%;
+    color: white;
 }

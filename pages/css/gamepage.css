@@ -50,10 +50,10 @@ body {
   display: flex;
   background-color: lightgray;
   height:95%;
-  width: 95%;
-
- 
+  width: 75%;
+  flex-direction: row;
 }
+
 
 .partyblock {
   display: flex;
@@ -98,5 +98,20 @@ body {
   background-color: blue;
   width: 70%;
   height: 10vh;
-} 
+} */
 
+.samuel {
+display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.samuel h1 {
+  margin: 0;
+  text-align: center;
+}
+.samuel h2 {
+   margin: 0;
+}

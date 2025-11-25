@@ -1,0 +1,53 @@
+.colorButtons {
+			display: block;
+			margin: 20px 0;
+		}
+
+		canvas {
+			cursor: crosshair;
+		}
+
+		div#sidebar {
+             position: relative;
+             width: 200px;
+            padding: 20px;
+            background: #ddd;
+            height: 100%;
+             box-sizing: border-box;
+        }
+
+
+
+		canvas#canvas {
+            width: 600px;
+             height: 600px;
+             background: white;
+             border: 1px solid #000;
+            }
+
+
+		.btn {
+			margin-bottom: 10px;
+			width: 100%;
+		}
+		input {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+
+		.input-group {
+			margin-bottom: 10px;
+		}
+
+		.toolsButtons .btn {
+			width: 48%;
+		}
+
+		.sizeButtons .btn {
+			width: 48%;
+		}
+
+		.colorpicker {
+			background: transparent;
+			height: 40px;
+		}

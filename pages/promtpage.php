@@ -16,7 +16,8 @@
     <div class="prompt-card">
       <div class="prompt-header">stuur een promt</div>
       <input class="prompt-input" type="text" placeholder="insert promt" />
-      <button class="prompt-button">stuur op</button>
+      <button class="prompt-button">voeg toe</button>
+      <button class="clear-prompts-button">remove array</button>
     </div>
   </main>
 

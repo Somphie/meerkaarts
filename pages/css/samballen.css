@@ -1,8 +1,10 @@
 body {
+    margin: 0;
+    height: 100vh;
     cursor: url("../images/kraatscursor.jpg"), not-allowed;
     background-image: url("../images/samballenbackground.jpg");
     background-repeat: no-repeat;
-    background-color: lawngreen ;
+    background-color: lawngreen;
 }
 
 .container {
@@ -10,13 +12,15 @@ body {
     top: -20%;
     color: white;
 }
+
 .video-wrapper {
-   white-space: nowrap;    
+    white-space: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
 }
+
 .spotify-embed {
-   width: 50%;
+    width: 50%;
 }
 
 .container2 {
@@ -47,7 +51,7 @@ body {
 
 .liveshows {
     text-align: center;
-    display:flex;
+    display: flex;
     justify-content: center;
     flex-direction: column;
 }
@@ -60,6 +64,6 @@ body {
     margin-left: 30%;
     margin-right: 30%;
     background-image: url("../images/ogfotoahh.png");
-     background-position: center 20%;
+    background-position: center 20%;
     color: white;
 }

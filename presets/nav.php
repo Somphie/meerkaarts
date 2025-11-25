@@ -3,19 +3,6 @@
 
 <head>
     <link rel="stylesheet" href="css/header.css">
-</head>
-
-<body>
-
-    <nav>
-        <ul>
-            <li><a class="word" href="./over-ons.php">Over ons</a></li>
-            <li><a class="word" href="./gamemodes.php">Gamemodes</a></li>
-            <li><a class="word" href="./home-page.php">Home</a></li>
-            <li><a class="word" href="./promtpage.php">Prompts inzenden</a></li>
-            <li><a class="word" href="./sambalindex.php">de samballen</a></li>
-        </ul>
-    </nav>
     <style>
         nav {
             display: flex;
@@ -50,13 +37,6 @@
             padding-bottom: 32px;
         }
 
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-        }
-
         .word {
             width: 17.5%;
             padding: 14px 16px;
@@ -72,6 +52,19 @@
             margin: 0;
         }
     </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a class="word" href="./over-ons.php">Over ons</a></li>
+            <li><a class="word" href="./gamemodes.php">Gamemodes</a></li>
+            <li><a class="word" href="./home-page.php">Home</a></li>
+            <li><a class="word" href="./promtpage.php">Prompts inzenden</a></li>
+            <li><a class="word" href="./sambalindex.php">de samballen</a></li>
+        </ul>
+    </nav>
 </body>
 
 </html>

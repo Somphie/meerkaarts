@@ -10,6 +10,11 @@ main {
   color: white;
 }
 
+body {
+  margin: 0;
+  height: 100vh;
+}
+
 .grootediv {
   display: flex;
   flex-direction: column;

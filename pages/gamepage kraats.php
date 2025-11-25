@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/gamepage.css">
+    <link rel="stylesheet" href="css/gamepage kraats.css">
     <title>meerkaarts.io</title>
 </head>
 
@@ -29,7 +29,8 @@
                 </div>
             </div>
                 <div class="rechts">
-
+                    <h1>Sabotage</h1>
+                    <div class="sabotages"></div>
                 </div>
         </div>
     </main>

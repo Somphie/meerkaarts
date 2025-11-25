@@ -16,7 +16,6 @@ if (input && button) {
   });
 }
 
-
 const display = document.querySelector('.prompt-display');
 
 if (display) {
@@ -27,8 +26,12 @@ if (display) {
     const randomPrompt = prompts[randomIndex];
 
     display.textContent = randomPrompt;
+
+    localStorage.setItem("currentPrompt", randomPrompt);
+
   } else {
     display.textContent = "Voeg een prompt toe SAMUEL";
+    localStorage.setItem("currentPrompt", "masterpiece");
   }
 }
 
@@ -37,7 +40,6 @@ const clearBtn = document.querySelector('.clear-prompts-button');
 if (clearBtn) {
   clearBtn.addEventListener('click', () => {
     localStorage.removeItem('prompts');
-
-    alert("hoi sam");
+    alert("Alle prompts gewist!");
   });
 }

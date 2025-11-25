@@ -73,6 +73,7 @@
         </div>
     </main>
 </body>
-<script src="scripts/TekenScript.js"></script>
 <script src="scripts/PromptScript.js"></script>
+<script src="scripts/TekenScript.js"></script>
+
 </html>

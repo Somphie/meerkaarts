@@ -19,5 +19,6 @@
       <button class="prompt-button">stuur op</button>
     </div>
   </main>
-</body>
+
+<script src="scripts/PromptScript.js"></script>
 </html>

@@ -28,7 +28,7 @@ if (display) {
 
     display.textContent = randomPrompt;
   } else {
-    display.textContent = "Geen prompts beschikbaar!";
+    display.textContent = "Voeg een prompt toe SAMUEL";
   }
 }
 

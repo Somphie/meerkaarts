@@ -6,28 +6,25 @@ const clearBtn = document.querySelector('.clear-prompts-button');
 function sendToDatabase(text) {
   fetch("/database/push_prompt.php", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded"
-    },
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: "value=" + encodeURIComponent(text)
   })
-    .then(response => response.text())
-    .then(data => {
-      console.log("response:", data);
-    })
-    .catch(error => {
-      console.error("error:", error);
-    });
+  .then(response => response.text())
+  .then(data => {
+    console.log("response:", data);
+    fetchPrompt("latest");
+  })
+  .catch(error => console.error("error:", error));
 }
 
 function fetchPrompt(option = "latest") {
-  fetch('/database/get_prompts.php')
+  fetch('/database/get_prompts.php?nocache=' + Date.now())
     .then(res => res.json())
     .then(data => {
-      if (!data || data.length == 0) return;
+      if (!data || data.length === 0) return;
 
       let prompt;
-      if (option == "latest") {
+      if (option === "latest") {
         prompt = data[0].prompt_text;
       } else if (option === "random") {
         const randomIndex = Math.floor(Math.random() * data.length);
@@ -46,22 +43,25 @@ if (input && button) {
     if (!value) return;
 
     sendToDatabase(value);
-
     input.value = '';
   });
 }
 
-if (display) {
-  fetchPrompt("random");
-}
+document.addEventListener("DOMContentLoaded", () => {
+  if (display) {
+    fetchPrompt("random");
+  }
+});
 
 if (clearBtn) {
   clearBtn.addEventListener('click', () => {
-    fetch('/database/clear_prompts.php', {
-      method: 'POST'
-    })
-    .then(res => res.text())
-    .then(msg => alert(msg))
-    .catch(err => console.error(err));
+    fetch('/database/clear_prompts.php', { method: 'POST' })
+      .then(res => res.text())
+      .then(msg => {
+        alert(msg);
+        display.textContent = '';
+        localStorage.removeItem("currentPrompt");
+      })
+      .catch(err => console.error(err));
   });
 }

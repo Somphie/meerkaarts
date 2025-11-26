@@ -1,45 +1,40 @@
 const input = document.querySelector('.prompt-input');
 const button = document.querySelector('.prompt-button');
+const display = document.querySelector('.prompt-display');
+const clearBtn = document.querySelector('.clear-prompts-button');
 
 if (input && button) {
   button.addEventListener('click', () => {
     const value = input.value.trim();
     if (!value) return;
 
-    let prompts = JSON.parse(localStorage.getItem('prompts')) || [];
+    fetch('save_prompt.php', {
+      method: 'POST',
+      body: new URLSearchParams({ prompt: value })
+    })
+    .then(res => res.text())
+    .then(msg => console.log(msg))
+    .catch(err => console.error(err));
 
-    prompts.push(value);
-    localStorage.setItem('prompts', JSON.stringify(prompts));
-
-    console.log("Prompts:", prompts);
     input.value = '';
   });
 }
 
-const display = document.querySelector('.prompt-display');
-
 if (display) {
-  let prompts = JSON.parse(localStorage.getItem('prompts')) || [];
-
-  if (prompts.length > 0) {
-    const randomIndex = Math.floor(Math.random() * prompts.length);
-    const randomPrompt = prompts[randomIndex];
-
-    display.textContent = randomPrompt;
-
-    localStorage.setItem("currentPrompt", randomPrompt);
-
-  } else {
-    display.textContent = "Voeg een prompt toe SAMUEL";
-    localStorage.setItem("currentPrompt", "masterpiece");
-  }
+  fetch('get_prompt.php')
+    .then(res => res.text())
+    .then(prompt => {
+      display.textContent = prompt;
+      localStorage.setItem("currentPrompt", prompt);
+    })
+    .catch(err => console.error(err));
 }
-
-const clearBtn = document.querySelector('.clear-prompts-button');
 
 if (clearBtn) {
   clearBtn.addEventListener('click', () => {
-    localStorage.removeItem('prompts');
-    alert("Alle prompts gewist!");
+    fetch('clear_prompts.php')
+      .then(res => res.text())
+      .then(msg => alert(msg))
+      .catch(err => console.error(err));
   });
 }

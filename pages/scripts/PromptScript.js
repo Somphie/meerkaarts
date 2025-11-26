@@ -20,11 +20,20 @@ function sendToDatabase(text) {
     });
 }
 
-function fetchLatestPrompt() {
+function fetchPrompt(option = "latest") {
   fetch('/database/get_prompts.php')
     .then(res => res.json())
     .then(data => {
-      const prompt = data.prompt_text || '';
+      if (!data || data.length == 0) return;
+
+      let prompt;
+      if (option == "latest") {
+        prompt = data[0].prompt_text;
+      } else if (option === "random") {
+        const randomIndex = Math.floor(Math.random() * data.length);
+        prompt = data[randomIndex].prompt_text;
+      }
+
       display.textContent = prompt;
       localStorage.setItem("currentPrompt", prompt);
     })
@@ -43,7 +52,7 @@ if (input && button) {
 }
 
 if (display) {
-  fetchLatestPrompt();
+  fetchPrompt("random");
 }
 
 if (clearBtn) {

@@ -53,10 +53,6 @@
                                 <h3>Storage</h3>
                                 <input type="button" value="Save" class="btn btn-warning" id="save">
                             </div>
-                            <div class="extra">
-                                <h3>Extra</h3>
-                                <a id="saveToImage" class="btn btn-warning">Download</a>
-                            </div>
                             
                         </div>
                         <div class="spelletje">

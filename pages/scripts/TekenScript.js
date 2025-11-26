@@ -96,10 +96,17 @@ function save() {
 
     localStorage.setItem("savedCanvas", JSON.stringify(saves));
 
-    console.clear();
-    saves.forEach(item => console.log(item.name, item.data));
-
     saveCounter++;
+
+    let activePrompt = localStorage.getItem("currentPrompt");
+    if (!activePrompt || activePrompt.trim() === "") activePrompt = "masterpiece";
+
+    const cleanName = activePrompt.replace(/[^a-z0-9]/gi, "_").toLowerCase();
+
+    const link = document.createElement('a');
+    link.href = canvas.toDataURL();
+    link.download = cleanName + ".png";
+    link.click();
 }
 
 function downloadCanvas(link, canvasId, filename) {
@@ -123,20 +130,9 @@ document.getElementById('bgcolorpicker').addEventListener('change', function () 
     currentBg = this.value;
     redraw();
 });
-
 document.getElementById('controlSize').addEventListener('change', function () {
     currentSize = this.value;
     document.getElementById("showSize").innerHTML = this.value;
-});
-
-document.getElementById('saveToImage').addEventListener('click', function () {
-    let activePrompt = localStorage.getItem("currentPrompt");
-
-    if (!activePrompt || activePrompt.trim() === "") activePrompt = "masterpiece";
-
-    const cleanName = activePrompt.replace(/[^a-z0-9]/gi, "_").toLowerCase();
-
-    downloadCanvas(this, 'canvas', cleanName + ".png");
 });
 
 document.getElementById('eraser').addEventListener('click', eraser);

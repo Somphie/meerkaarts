@@ -4,7 +4,7 @@ const display = document.querySelector('.prompt-display');
 const clearBtn = document.querySelector('.clear-prompts-button');
 
 function sendToDatabase(text) {
-  fetch("/push_prompt.php", {
+  fetch("/database/push_prompt.php", {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded"
@@ -21,7 +21,7 @@ function sendToDatabase(text) {
 }
 
 function fetchLatestPrompt() {
-  fetch('/get_prompts.php')
+  fetch('/database/get_prompts.php')
     .then(res => res.json())
     .then(data => {
       const prompt = data.prompt_text || '';
@@ -48,7 +48,7 @@ if (display) {
 
 if (clearBtn) {
   clearBtn.addEventListener('click', () => {
-    fetch('/clear_prompts.php', {
+    fetch('/database/clear_prompts.php', {
       method: 'POST'
     })
     .then(res => res.text())

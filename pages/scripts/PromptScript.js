@@ -3,38 +3,56 @@ const button = document.querySelector('.prompt-button');
 const display = document.querySelector('.prompt-display');
 const clearBtn = document.querySelector('.clear-prompts-button');
 
-if (input && button) {
-  button.addEventListener('click', () => {
-    const value = input.value.trim();
-    if (!value) return;
-
-    fetch('database/save_prompt.php', {
-      method: 'POST',
-      body: new URLSearchParams({ prompt: value })
+function sendToDatabase(text) {
+  fetch("/database/push_prompt.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    body: "value=" + encodeURIComponent(text)
+  })
+    .then(response => response.text())
+    .then(data => {
+      console.log("response:", data);
     })
-    .then(res => res.text())
-    .then(msg => console.log(msg))
-    .catch(err => console.error(err));
-
-    input.value = '';
-  });
+    .catch(error => {
+      console.error("error:", error);
+    });
 }
 
-if (display) {
-  fetch('database/get_prompt.php')
-    .then(res => res.text())
-    .then(prompt => {
+function fetchLatestPrompt() {
+  fetch('/database/get_prompts.php')
+    .then(res => res.json())
+    .then(data => {
+      const prompt = data.prompt_text || '';
       display.textContent = prompt;
       localStorage.setItem("currentPrompt", prompt);
     })
     .catch(err => console.error(err));
 }
 
+if (input && button) {
+  button.addEventListener('click', () => {
+    const value = input.value.trim();
+    if (!value) return;
+
+    sendToDatabase(value);
+
+    input.value = '';
+  });
+}
+
+if (display) {
+  fetchLatestPrompt();
+}
+
 if (clearBtn) {
   clearBtn.addEventListener('click', () => {
-    fetch('database/clear_prompts.php')
-      .then(res => res.text())
-      .then(msg => alert(msg))
-      .catch(err => console.error(err));
+    fetch('/database/clear_prompts.php', {
+      method: 'POST'
+    })
+    .then(res => res.text())
+    .then(msg => alert(msg))
+    .catch(err => console.error(err));
   });
 }

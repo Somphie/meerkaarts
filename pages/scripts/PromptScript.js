@@ -8,7 +8,7 @@ if (input && button) {
     const value = input.value.trim();
     if (!value) return;
 
-    fetch('save_prompt.php', {
+    fetch('database/save_prompt.php', {
       method: 'POST',
       body: new URLSearchParams({ prompt: value })
     })
@@ -21,7 +21,7 @@ if (input && button) {
 }
 
 if (display) {
-  fetch('get_prompt.php')
+  fetch('database/get_prompt.php')
     .then(res => res.text())
     .then(prompt => {
       display.textContent = prompt;
@@ -32,7 +32,7 @@ if (display) {
 
 if (clearBtn) {
   clearBtn.addEventListener('click', () => {
-    fetch('clear_prompts.php')
+    fetch('database/clear_prompts.php')
       .then(res => res.text())
       .then(msg => alert(msg))
       .catch(err => console.error(err));

@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1, initial-scale=1.0">
     <link rel="stylesheet" href="css/over-ons.css">
-    <title>meerkaarts.io</title>
+    <title>over ons</title>
+    <link rel="icon" type="image/x-icon" href="/pages/images/favi.ico">
 </head>
 
 <body>

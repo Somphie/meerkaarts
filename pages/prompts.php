@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>gamemodes</title>
-  <link rel="stylesheet" href="css/prompts.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/prompts.css" />
+  <title>promptjes</title>
+  <link rel="icon" type="image/x-icon" href="/pages/images/favi.ico">
 </head>
+
 <body>
 
-<?php include("../presets/nav.php"); ?>
+  <?php include("../presets/nav.php"); ?>
 
   <main class="content">
     <h1 class="page-title">Prompts inzenden</h1>
@@ -20,4 +23,5 @@
     </div>
   </main>
 </body>
+
 </html>

@@ -58,11 +58,11 @@
 
     <nav>
         <ul>
-            <li><a class="word" href="/pages/over-ons.php">Over ons</a></li>
-            <li><a class="word" href="/pages/gamemodes.php">Gamemodes</a></li>
-            <li><a class="word" href="/pages/home-page.php">Home</a></li>
-            <li><a class="word" href="/pages/promtpage.php">Prompts inzenden</a></li>
-            <li><a class="word" href="/pages/sambalindex.php">de samballen</a></li>
+            <li><a class="word" href="./over-ons.php">Over ons</a></li>
+            <li><a class="word" href="./gamemodes.php">Gamemodes</a></li>
+            <li><a class="word" href="./home-page.php">Home</a></li>
+            <li><a class="word" href="./promtpage.php">Prompts inzenden</a></li>
+            <li><a class="word" href="./sambalindex.php">de samballen</a></li>
         </ul>
     </nav>
 </body>

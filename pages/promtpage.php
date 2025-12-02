@@ -22,5 +22,8 @@
     </div>
   </main>
 
+    <?php include("../presets/footer.php"); ?>
+
 <script src="scripts/PromptScript.js"></script>
+</body>
 </html>

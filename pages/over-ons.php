@@ -27,6 +27,8 @@
     <img src="images/asociate.png" alt="acosiate" width="50%px">
 
 </div>
+
+    <?php include("../presets/footer.php"); ?>
 </body>
 
 </html>

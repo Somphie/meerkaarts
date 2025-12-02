@@ -34,6 +34,7 @@
                 </div>
         </div>
     </main>
+    <?php include("../presets/footer.php"); ?>
 </body>
 
 </html>

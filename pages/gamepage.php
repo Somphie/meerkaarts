@@ -69,8 +69,10 @@
                 </div>
         </div>
     </main>
-</body>
+
+    <?php include("../presets/footer.php"); ?>
 <script src="scripts/PromptScript.js"></script>
 <script src="scripts/TekenScript.js"></script>
+</body>
 
 </html>

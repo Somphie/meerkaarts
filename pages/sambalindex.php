@@ -127,6 +127,8 @@
 
 </div>
 
+
+    <?php include("../presets/footer.php"); ?>
 <script src="scripts/samballen.js"></script>
 </body>
 </html>

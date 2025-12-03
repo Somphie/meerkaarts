@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/gamepage kraats.css">
+    <link rel="stylesheet" href="css/gamepage_kraats.css">
     <title>meerkaarts.io</title>
 </head>
 
@@ -28,10 +28,23 @@
                     </div>
                 </div>
             </div>
-                <div class="rechts">
-                    <h1>Sabotage</h1>
-                    <div class="sabotages"></div>
+            <div class="rechts">
+                <h1>Sabotage</h1>
+                <div class="sabotages">
+                    <img class="foto" src="images/error.png" alt="error-pop-up">
+                    <img class="foto" src="images/colourwheel.png" alt="thewheel">
+                    <img class="foto" src="images/muis.png" alt="muis">
+                    <div class="boven">
+                        <img class="foto" src="images/eclipse.png" alt="eclipsee">
+                        <img class="foto" src="images/Freddy.png" alt="Freddy">
+                    </div>
+                    <img class="foto" src="images/metalpipe.png" alt="pipe">
+                    <div class="onder">
+                        <img class="foto" src="images/airhorn.png" alt="horn">
+                        <img class="foto" src="images/firealarm.png" alt="alarm">
+                    </div>
                 </div>
+            </div>
         </div>
     </main>
     <?php include("../presets/footer.php"); ?>

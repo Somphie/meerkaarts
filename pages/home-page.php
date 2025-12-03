@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home-page.css">
-    <title>home</title>
-    <link rel="icon" type="image/x-icon" href="/pages/images/favi.ico">
+    <title>meerkaarts.io</title>
 </head>
 
 <body>
@@ -15,15 +14,36 @@
      <main>
         <div class="grootediv">
         <div class="blauw">
-            <h1>meerkaarts.io</h1>
-            <div class="boom">
-                <img src="images/minesweeper.jpg" alt="minesweeper"></div>
+            <div class="beige">
+                <div class="biem"> 
+                <h1>meerkaarts.io</h1>
+                </div>
+                 <div class="boom">
+                    <a class="bminesweeper"  href="https://minesweeper.online/">
+                    <img src="images/minesweeper.jpg" alt="">
+                    </a>
+                    <div class="bartsimpson">
+                        <img src="images/audioplayer.png" alt="">
+                        <img src="images/linux.png" alt="">
+                    </div>
+                </div>
+            </div>
+        <div class="bruin">
+            <div class="bread">
+                <img src="images/phone1.png" alt="">
+                <img src="images/iphone.png" alt="">
+                <img src="images/linus.png" alt="">
+            </div>
+            <div class="bruh">
+                <img src="images/psadd.png" alt="">
+                <img src="images/phonenokia.png" alt="">
+                <img src="images/clippy.png" alt="">
+            </div>
+            </div>
         </div>
         
         </div>
     </main>
-
-    <?php include("../presets/footer.php"); ?>
 </body>
 
 </html>

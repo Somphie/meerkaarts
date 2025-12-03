@@ -40,10 +40,75 @@ body {
     display: flex;
     justify-content: center;
     color: white;
+    flex-direction: row-reverse;
 }
-.boom {
-  height: 120px;
-  width: 120px;
+.boom{
+  height: 50px;
+  width: 5ch;
   display: flex;
-  margin: auto;
+  align-items: start;
+  flex-direction: column;
+  justify-content: right;
+  margin-top: 35%;
+  margin-left: -60%;
+}
+.bread {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top: -47%;
+margin-left: 1%;
+}
+.bruh {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: start;
+  margin-top: -15%;
+}
+.bruin {
+display: flex;
+flex-direction: row-reverse;
+margin-right: -5%;
+margin-top: 15%;
+}
+.biem{
+  display: flex;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 60%;
+}
+.beige{
+  display: flex;
+  flex-direction: row;
+  margin-right: 30%;
+}
+.bartsimpson{
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+  margin-left: -380%;
+}
+.bartsimpson img{
+  height: 150px;
+  width: 440px;
+  margin: 0;
+}
+.bread img{
+  height: 180px;
+  width: 180px;
+  margin-bottom: 2%;
+}
+.bruh img{
+  height: 180px;
+  width: 180px;
+  margin-bottom: 2%;
+}
+.bminesweeper img{
+  height: 190px;
+  width: 190px;
+  margin-top: 15%;
+  margin-bottom: -10%;
+  margin-left: 50%;
 }

@@ -1,6 +1,6 @@
 <?php
 
-include("prompts_database.php");
+include("database.php");
 
 $sql = "SELECT id, prompt_text FROM prompts ORDER BY id DESC";
 $result = $conn->query($sql);

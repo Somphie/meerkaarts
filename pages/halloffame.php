@@ -1,30 +1,32 @@
 <?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db = "mydb";
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-$conn = new mysqli($host, $user, $pass, $db);
-if ($conn->connect_error) die("Connectie mislukt: " . $conn->connect_error);
+// database connectie includen
+include("../database/database.php");
 
-// Haal alle images op
+// check of $conn bestaat en ok
+if (!$conn) die("Database connectie ontbreekt.");
+
+// Haal images op
 $result = $conn->query("SELECT filename FROM images ORDER BY uploaded_at DESC");
+if (!$result) die("Query mislukt: " . $conn->error);
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hall of Fame</title>
 </head>
 <body>
-    <?php include("../presets/nav.php"); ?>
-    <div style="display:flex; flex-wrap:wrap; gap:10px;">
-    <?php foreach($files as $file): ?>
-        <div>
-            <img src="<?= $file ?>" width="200"><br>
-            <?= basename($file) ?>
-        </div>
-    <?php endforeach; ?>
+<h1>Hall of Fame</h1>
+<div style="display:flex; flex-wrap:wrap; gap:10px;">
+<?php while ($row = $result->fetch_assoc()): ?>
+    <div>
+        <img src="savedimg/<?= htmlspecialchars($row['filename']) ?>" width="200"><br>
+        <?= htmlspecialchars($row['filename']) ?>
+    </div>
+<?php endwhile; ?>
+</div>
 </body>
 </html>

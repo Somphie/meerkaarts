@@ -1,3 +1,38 @@
+<?php
+$dir = "savedimg/";
+if (!is_dir($dir)) mkdir($dir, 0777, true);
+
+// Database connectie
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "mydb";
+
+$conn = new mysqli($host, $user, $pass, $db);
+if ($conn->connect_error) die("Connectie mislukt: " . $conn->connect_error);
+
+if (isset($_POST['imgBase64']) && isset($_POST['filename'])) {
+    $filename = preg_replace('/[^a-z0-9_]/', '_', strtolower($_POST['filename'])) . ".png";
+    $filepath = $dir . $filename;
+
+    $data = $_POST['imgBase64'];
+    $data = str_replace('data:image/png;base64,', '', $data);
+    $data = str_replace(' ', '+', $data);
+    $fileData = base64_decode($data);
+
+    file_put_contents($filepath, $fileData);
+
+    // Opslaan in database
+    $stmt = $conn->prepare("INSERT INTO images (filename) VALUES (?)");
+    $stmt->bind_param("s", $filename);
+    $stmt->execute();
+    $stmt->close();
+
+    echo "Opslaan gelukt!";
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +89,10 @@
                                 <h3>Storage</h3>
                                 <input type="button" value="Save" class="btn btn-warning" id="save">
                             </div>
-                            
+                            <div class="halloffame">    
+                            <h3>hall of fame</h3>
+                                <a href="halloffame.php">enter</a>
+                            </div>
                         </div>
                         <div class="spelletje">
 
@@ -65,7 +103,7 @@
                 </div>
             </div>
                 <div class="rechts">
-                    
+
                 </div>
         </div>
     </main>

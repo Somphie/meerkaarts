@@ -86,28 +86,36 @@ function store(x, y, s, c) {
 }
 
 function save() {
+    // LocalStorage opslaan
     const saveItem = {
         name: "img" + saveCounter,
         data: [...linesArray]
     };
-
     let saves = JSON.parse(localStorage.getItem("savedCanvas")) || [];
     saves.push(saveItem);
-
     localStorage.setItem("savedCanvas", JSON.stringify(saves));
-
     saveCounter++;
 
-    let activePrompt = localStorage.getItem("currentPrompt");
-    if (!activePrompt || activePrompt.trim() === "") activePrompt = "masterpiece";
-
+    // Download
+    let activePrompt = localStorage.getItem("currentPrompt") || "masterpiece";
     const cleanName = activePrompt.replace(/[^a-z0-9]/gi, "_").toLowerCase();
-
     const link = document.createElement('a');
     link.href = canvas.toDataURL();
     link.download = cleanName + ".png";
     link.click();
+
+    // Upload naar server
+    const dataURL = canvas.toDataURL("image/png");
+    fetch("gamepage.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: "imgBase64=" + encodeURIComponent(dataURL) + "&filename=" + encodeURIComponent(cleanName)
+    })
+    .then(response => response.text())
+    .then(data => console.log(data))
+    .catch(err => console.error(err));
 }
+
 
 function downloadCanvas(link, canvasId, filename) {
     const cnv = document.getElementById(canvasId);

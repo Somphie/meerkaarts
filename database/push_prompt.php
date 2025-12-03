@@ -1,6 +1,6 @@
 <?php
 
-include("prompts_database.php");
+include("database.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['value'])) {
     $value = $_POST['value'];

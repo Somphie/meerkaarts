@@ -9,10 +9,7 @@ let currentSize = 5;
 let currentColor = "rgb(200,20,100)";
 let currentBg = "white";
 
-
-
 createCanvas();
-
 
 function createCanvas() {
     const spelDiv = document.querySelector('.spelletje');
@@ -58,7 +55,6 @@ function redraw() {
     }
 }
 
-
 function mousedown(canvas, evt) {
     isMouseDown = true;
     ctx.beginPath();
@@ -80,60 +76,39 @@ function mouseup() {
     isMouseDown = false;
 }
 
-
 function store(x, y, s, c) {
     linesArray.push({ x, y, size: s, color: c });
 }
 
 function save() {
-    // LocalStorage opslaan
-    const saveItem = {
-        name: "img" + saveCounter,
-        data: [...linesArray]
-    };
-    let saves = JSON.parse(localStorage.getItem("savedCanvas")) || [];
-    saves.push(saveItem);
-    localStorage.setItem("savedCanvas", JSON.stringify(saves));
-    saveCounter++;
-
-    // Download
     let activePrompt = localStorage.getItem("currentPrompt") || "masterpiece";
     const cleanName = activePrompt.replace(/[^a-z0-9]/gi, "_").toLowerCase();
-    const link = document.createElement('a');
-    link.href = canvas.toDataURL();
-    link.download = cleanName + ".png";
-    link.click();
-
-    // Upload naar server
     const dataURL = canvas.toDataURL("image/png");
-    fetch("gamepage.php", {
+
+    fetch("/database/push_image.php", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: "imgBase64=" + encodeURIComponent(dataURL) + "&filename=" + encodeURIComponent(cleanName)
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ image: dataURL, filename: cleanName })
     })
-    .then(response => response.text())
-    .then(data => console.log(data))
-    .catch(err => console.error(err));
+        .then(response => response.json())
+        .then(result => {
+            if (result.status == 'success') {
+                console.log("afbeelding opgeslagen op server, hier is ie:", result.path);
+            } else {
+                console.error("errortje bij opslaan:", result.error);
+            }
+        })
+        .catch(err => console.error(err));
 }
-
-
-function downloadCanvas(link, canvasId, filename) {
-    const cnv = document.getElementById(canvasId);
-    link.href = cnv.toDataURL();
-    link.download = filename;
-}
-
 
 function eraser() {
     currentColor = currentBg;
     currentSize = 20;
 }
 
-
 document.getElementById('colorpicker').addEventListener('change', function () {
     currentColor = this.value;
 });
-
 document.getElementById('bgcolorpicker').addEventListener('change', function () {
     currentBg = this.value;
     redraw();

@@ -5,8 +5,8 @@ include 'database.php';
 
 $request = json_decode(file_get_contents("php://input"), true);
 
-if (!isset($request['image']) || !isset($request['filename'])) {
-    echo json_encode(['status' => 'error', 'error' => 'Geen afbeelding of bestandsnaam meegegeven']);
+if (!isset($request['image']) || !isset($request['filename']) || !isset($request['prompt'])) {
+    echo json_encode(['status' => 'error', 'error' => 'Geen afbeelding, bestandsnaam of prompt meegegeven']);
     exit;
 }
 
@@ -25,14 +25,16 @@ if (!file_exists($uploadFolder)) {
 }
 
 $tempPath = 'database/images/temp.png';
-$stmt = $conn->prepare("INSERT INTO images (path, created_at) VALUES (?, NOW())");
-$stmt->bind_param("s", $tempPath);
+$prompt = $request['prompt'];
+
+// Insert with temporary path and prompt
+$stmt = $conn->prepare("INSERT INTO images (path, prompt, created_at) VALUES (?, ?, NOW())");
+$stmt->bind_param("ss", $tempPath, $prompt);
 $stmt->execute();
 $imageId = $conn->insert_id;
 $stmt->close();
 
 $originalFilename = preg_replace('/[^a-z0-9_]/i', '_', $request['filename']);
-
 $filename = $imageId . '_' . $originalFilename . '.png';
 $fullPath = $uploadFolder . $filename;
 
@@ -42,6 +44,7 @@ if (!file_put_contents($fullPath, $decodedImage)) {
     exit;
 }
 
+// Update path in database
 $dbPath = 'database/images/' . $filename;
 $stmt = $conn->prepare("UPDATE images SET path = ? WHERE id = ?");
 $stmt->bind_param("si", $dbPath, $imageId);
@@ -52,5 +55,6 @@ $conn->close();
 echo json_encode([
     'status' => 'success',
     'id' => $imageId,
-    'path' => $dbPath
+    'path' => $dbPath,
+    'prompt' => $prompt
 ]);

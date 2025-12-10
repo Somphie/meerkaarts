@@ -18,6 +18,7 @@ if (!$result) die("Query mislukt: " . $conn->error);
 <head>
     <title>Hall of Fame</title>
     <link rel="stylesheet" href="css/halloffame.css">
+    <link rel="icon" type="image/x-icon" href="/pages/images/favi.ico">
 </head>
 <body>
     <?php include("../presets/nav.php"); ?>

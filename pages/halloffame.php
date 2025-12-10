@@ -10,23 +10,26 @@ include("../database/database.php");
 if (!$conn) die("Database connectie ontbreekt.");
 
 // Haal images op
-$result = $conn->query("SELECT filename FROM images ORDER BY uploaded_at DESC");
+$result = $conn->query("SELECT `path` FROM `images` ORDER BY `created_at` DESC");
 if (!$result) die("Query mislukt: " . $conn->error);
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Hall of Fame</title>
+    <link rel="stylesheet" href="css/halloffame.css">
 </head>
 <body>
+    <?php include("../presets/nav.php"); ?>
 <h1>Hall of Fame</h1>
-<div style="display:flex; flex-wrap:wrap; gap:10px;">
+<div class="container">
 <?php while ($row = $result->fetch_assoc()): ?>
     <div>
-        <img src="savedimg/<?= htmlspecialchars($row['filename']) ?>" width="200"><br>
-        <?= htmlspecialchars($row['filename']) ?>
+        <img src="../<?= htmlspecialchars($row['path']) ?>" width="200"><br>
     </div>
 <?php endwhile; ?>
 </div>
+<?php include("../presets/footer.php"); ?>
 </body>
+
 </html>

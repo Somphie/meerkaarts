@@ -27,14 +27,13 @@ body {
 .naam {
   display: flex;
   justify-content: center;
-  background-color: #FA5EDE;
+  background-color: rgba(250,94,222,1);
   width: 80%;
   height: 10vh;
 } 
 
 .blauw {
-    background-color: #FA5EDE;
-    opacity:60% ;
+    background-color: rgba(250,94,222,0.6);
     height: 100vh;
     width: 80%;
     display: flex;

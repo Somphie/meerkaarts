@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/auth.css">
     <style>
         nav {
             display: flex;
@@ -62,6 +63,7 @@
             <li><a class="word" href="./gamemodes.php">Gamemodes</a></li>
             <li><a class="word" href="./home-page.php">Home</a></li>
             <li><a class="word" href="./promtpage.php">Prompts inzenden</a></li>
+            <li><a class="word" href="javascript:void(0)" id="login-link">Login</a></li>
             <li><a class="word" href="./sambalindex.php">de samballen</a></li>
         </ul>
     </nav>

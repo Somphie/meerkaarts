@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home-page.css">
+    <link rel="stylesheet" href="css/login.css">
     <title>meerkaarts.io</title>
 </head>
 
 <body>
-    <?php include("../presets/nav.php"); ?>
+    <?php 
+        include("../presets/nav.php");
+        include("../auth/login.php");
+     ?>
 
      <main>
         <div class="grootediv">
@@ -45,6 +49,7 @@
         </div>
     </main>
     <?php include("../presets/footer.php"); ?>
+    <script src="scripts/login.js"></script>
 </body>
 
 </html>

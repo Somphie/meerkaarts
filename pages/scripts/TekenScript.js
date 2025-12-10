@@ -88,17 +88,21 @@ function save() {
     fetch("/database/push_image.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ image: dataURL, filename: cleanName })
-    })
-        .then(response => response.json())
-        .then(result => {
-            if (result.status == 'success') {
-                console.log("afbeelding opgeslagen op server, hier is ie:", result.path);
-            } else {
-                console.error("errortje bij opslaan:", result.error);
-            }
+        body: JSON.stringify({ 
+            image: dataURL, 
+            filename: cleanName,
+            prompt: activePrompt
         })
-        .catch(err => console.error(err));
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.status == 'success') {
+            console.log("afbeelding opgeslagen op server, hier is ie:", result.path);
+        } else {
+            console.error("errortje bij opslaan:", result.error);
+        }
+    })
+    .catch(err => console.error(err));
 }
 
 function eraser() {
